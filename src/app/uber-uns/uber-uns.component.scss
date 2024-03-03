@@ -1,0 +1,41 @@
+.container {
+    background-color: #E3D9D3; /* háttérszín */
+    color: black; /* szövegszín */
+    width: 100vw; /* teljes képernyő szélesség */
+    height: 80vh; /* 80% teljes képernyő magasság */
+    display: flex;
+    align-items: center; /* a tartalom függőleges középre igazítása */
+    justify-content: center; /* a tartalom vízszintes középre igazítása */
+    position: relative;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 2px solid black; /* felső vonal */
+    border-left: 2px solid black; /* bal oldali vonal */
+    width: 20%;
+    height: 20%;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid black; /* alsó vonal */
+    border-right: 2px solid black; /* jobb oldali vonal */
+    width: 20%;
+    height: 20%;
+  }
+  
+  .content {
+    padding: 40px;
+    gap: 10px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+  

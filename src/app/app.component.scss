@@ -1,0 +1,12 @@
+.grow-animation {
+    transition: all .2s ease-in-out; 
+}
+
+.grow-animation:hover {
+    transform: scale(1.2); 
+}
+
+body {
+    background-color: #561C24;
+    font-family: Quicksand;
+}
