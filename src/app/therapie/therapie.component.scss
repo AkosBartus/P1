@@ -1,18 +1,24 @@
 @media (max-width: 923px) {
-    .grid-cols-3 {
-      grid-template-columns: 1fr; /* Minden kártya egy oszlopot foglal */
-    }
-  
-    .grid-rows-5 {
-      grid-template-rows: repeat(5, minmax(0, 1fr)); /* Minden sor egy sorban lesz */
-    }
-  
-    .grid > * {
-      grid-column: auto; /* Minden elem a saját sorában helyezkedik el */
-    }
-  
-    .grid > *:nth-child(n+2) {
-      margin-top: 1rem; /* Margó az elemek között */
-    }
+  .grid-cols-3 {
+    grid-template-columns: 1fr; /* Minden kártya egy oszlopot foglal */
   }
-  
+
+  .grid-rows-5 {
+    grid-template-rows: repeat(
+      5,
+      minmax(0, 1fr)
+    ); /* Minden sor egy sorban lesz */
+  }
+
+  .grid > * {
+    grid-column: auto; /* Minden elem a saját sorában helyezkedik el */
+  }
+
+  .grid > *:nth-child(n + 2) {
+    margin-top: 1rem; /* Margó az elemek között */
+  }
+}
+
+.circle-content {
+  aspect-ratio: 1 / 1;
+}

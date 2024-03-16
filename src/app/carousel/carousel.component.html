@@ -1,1 +1,15 @@
-<section class="h-[80vh] bg-[#561C24] translate-y-[-2px]"></section>
+<div class="slideshow-container">
+    <div class="mySlides fade" *ngFor="let slide of slides; let i = index" [ngStyle]="{'display': currentIndex === i ? 'block' : 'none'}">
+      <div class="numbertext">{{ i + 1 }} / {{ slides.length }}</div>
+      <div class="text">{{ slide.content }}</div>
+    </div>
+    
+    <a class="prev" (click)="plusSlides(-1)">❮</a>
+    <a class="next" (click)="plusSlides(1)">❯</a>
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" *ngFor="let slide of slides; let i = index" (click)="currentSlide(i)" [class.active]="currentIndex === i"></span> 
+  </div>
+  
