@@ -1,2 +1,89 @@
-<p>kontakt works!</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2657.8624021556793!2d16.387216491733657!3d48.22852407071342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d078a477782f9%3A0x8483c737528fe687!2sBruno-Marek-Allee%205%2Ftop%209%2C%201020%20Wien%2C%20Ausztria!5e0!3m2!1shu!2shu!4v1709735047862!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<body>
+  <div
+    [formGroup]="form"
+    class="flex flex-col justify-center items-center p-10"
+  >
+    <h1 class="text-white">Kontakt</h1>
+    <form
+      action="javascript:void(0)"
+      class="flex flex-col justify-center items-center gap-5"
+      (submit)="send()"
+    >
+      <label class="input input-bordered flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="w-4 h-4 opacity-70"
+        >
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
+          />
+        </svg>
+        <input
+          formControlName="from_name"
+          type="text"
+          class="grow"
+          placeholder="Vor- und Familiennamen"
+        />
+      </label>
+      <label class="input input-bordered flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="w-4 h-4 opacity-70"
+        >
+          <path
+            d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
+          />
+          <path
+            d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
+          />
+        </svg>
+        <input
+          formControlName="from_email"
+          type="text"
+          class="grow"
+          placeholder="Email"
+        />
+      </label>
+      <input
+        formControlName="subject"
+        type="text"
+        placeholder="Subject"
+        class="input input-bordered w-full max-w-xs"
+      />
+      <textarea
+        formControlName="message"
+        placeholder="Bio"
+        class="textarea textarea-bordered textarea-sm w-full max-w-xs"
+      ></textarea>
+      <!--       {{ form.value | json }} -->
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+  <section class="flex flex-col justify-center items-center p-10 bg-[#e3d9d3] gap-5">
+    <div class="flex flex-col items-center w-[80%]">
+      <h1>Find us here!</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+        inventore quos voluptates, suscipit velit repudiandae minus omnis!
+        Voluptatem fuga sequi unde. Sint in neque inventore voluptates aut nemo.
+        Ducimus, iusto!
+      </p>
+    </div>
+    <div>
+      <iframe
+        class="w-[80vw]"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2657.862398306732!2d16.38951247674975!3d48.228524144824746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d078a477782f9%3A0x505e50f47e42a436!2sBruno-Marek-Allee%205%2F9%2C%201020%20Wien%2C%20%C3%96sterreich!5e0!3m2!1sde!2shu!4v1711635693323!5m2!1sde!2shu"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+</body>

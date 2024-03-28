@@ -1,3 +1,11 @@
+p { font-size: clamp(12px, 1.5vw + 1em, 16px); }
+h1 { font-size: clamp(1.8rem, 5vw, 4em); }
+h2 { font-size: clamp(1.5rem, 4vw, 3em); }
+h3 { font-size: clamp(1.3rem, 3vw, 2.5em); }
+h4 { font-size: clamp(1.2rem, 2.5vw, 2em); }
+h5 { font-size: clamp(1.1rem, 2vw, 1.8em); }
+h6 { font-size: clamp(1rem, 1.5vw, 1.5em); }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
